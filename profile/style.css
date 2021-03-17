@@ -113,7 +113,7 @@ p {
 }
 #hero .hero {
     max-width: 1200px;
-    margin: 0 400px;
+    margin: 0 450px;
     padding: 0 50px;
     justify-content: flex-start;
 }
@@ -263,7 +263,7 @@ p {
 }
 #projects .projects {
     flex-direction: column;
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 100px 0;
 }
@@ -323,7 +323,6 @@ p {
 }
 #projects .project-img {
     flex-basis: 50%;
-    height: 300px;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -405,10 +404,10 @@ p {
         border-radius: 0;
     }
     #projects .all-projects .project-info {
-        height: 100%;
+        height: 70%;
     }
     #projects .all-projects .project-img {
-        height: 100%;
+        height: 70%;
     }
     /* End Project */
 }
