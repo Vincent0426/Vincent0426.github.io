@@ -113,7 +113,7 @@ p {
 }
 #hero .hero {
     max-width: 1200px;
-    margin: 0 650px;
+    margin: 0 400px;
     padding: 0 50px;
     justify-content: flex-start;
 }
