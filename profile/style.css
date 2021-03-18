@@ -346,6 +346,76 @@ p {
 }
 /* End Projects section */
 
+/* contact Section */
+#contact {
+    background-image: url(./img/C.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+#contact::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: -1;
+}
+#contact .container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact-items {
+    width: 400px;
+}
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover {
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+    font-size: 2.5rem;
+    font-weight: 1000;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+#contact .contact-info h2 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin: 10px;
+}
+/*End contact Section */
+
 /* KeyFrames */
 @keyframes text_reveal_box {
     50% {
@@ -410,5 +480,39 @@ p {
         height: 70%;
     }
     /* End Project */
+
+    /* contact  */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    #contact .contact-item {
+        width: 30%;
+        margin: 0;
+        flex-direction: row;
+    }
+    #contact .contact-item .icon {
+        height: 100px;
+        width: 100px;
+    }
+    #contact .contact-item .icon img {
+        object-fit: contain;
+    }
+    #contact .contact-item .contact-info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    /* End contact  */
 }
 /* End Media Query For Tablet */
