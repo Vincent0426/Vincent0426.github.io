@@ -91,6 +91,27 @@ p {
     color: white;
     background-color: darkorange;
 }
+/* header */
+#header .hamburger {
+    display: none;
+}
+#header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+}
+#header .nav-list ul li {
+    display: inline-block;
+}
+#header .nav-list ul li a {
+    font-size: 1.8rem;
+}
+#header .nav-list ul a:after {
+    display: none;
+}
+/* End header */
 /* Header section */
 #header {
     position: fixed;
@@ -176,6 +197,7 @@ p {
     cursor: pointer;
     transform: scale(0.8);
     margin-right: 20px;
+    display: none;
 }
 #header .hamburger:after {
     position: absolute;
@@ -480,6 +502,7 @@ p {
     position: relative;
     z-index: 1;
 }
+
 #contact::after {
     content: "";
     position: absolute;
@@ -488,8 +511,14 @@ p {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0;
+    opacity: 0.5;
     z-index: -1;
+}
+#contact .section-title {
+    color: white;
+}
+#contact .section-title span {
+    color: white;
 }
 #contact .container {
     min-height: 100vh;
@@ -529,16 +558,18 @@ p {
     margin-bottom: 10px;
 }
 #contact .contact-info h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 1000;
     margin-bottom: 15px;
     margin-left: 10px;
+    color: white;
 }
 #contact .contact-info h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 2rem;
     font-weight: 500;
     margin: 10px;
+    color: white;
 }
 /*End contact Section */
 
