@@ -10,7 +10,7 @@
 6. project 讓瀏覽者可以直接連結至github
 
 css animation
-[https://www.youtube.com/watch?v=YszONjKpgg4]
+https://www.youtube.com/watch?v=YszONjKpgg4
 
 icon
 https://icons8.com/
