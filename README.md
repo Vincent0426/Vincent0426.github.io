@@ -3,6 +3,7 @@ https://vincent0426.github.io/profile/index.html
 
 * All 
 英文字體有連結google font 做變化，且有設定可以自動upper case
+有加了一些響應式功能控制排版
 
 * 首頁
 1. 背景有蓋一層黑色的版讓圖片變淡一點避免影響上面字體的呈現
