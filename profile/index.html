@@ -12,43 +12,52 @@
             integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
             crossorigin="anonymous"
         />
+        <!-- icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+        />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <!-- Header -->
-        <section id="header">
-            <div class="header container">
-                <div class="nav-bar">
-                    <div class="brand">
-                        <a href="#hero"><h1>Vincent Hsieh</h1></a>
-                    </div>
-                    <div class="nav-list">
-                        <div class="hamburger"><div class="bar"></div></div>
-                        <ul>
-                            <li><a href="#hero" data-after="Home">Home</a></li>
-                            <li>
-                                <a href="#about" data-after="About">About</a>
-                            </li>
-                            <li>
-                                <a href="#projects" data-after="Projects"
-                                    >Projects</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#services" data-after="Contact"
-                                    >Certificates</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#contact" data-after="Contact"
-                                    >Contact</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+        <nav id="nav" class="navbar py-4 fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-2" href="#">Chia-Hsiang Hsieh</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-end navCus"
+                    id="navbarNav"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link fs-2" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-2" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-2" href="#certificates"
+                                >Certificates</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-2" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </nav>
         <!-- End Header -->
         <!-- Hero Section -->
         <section id="hero">
@@ -57,12 +66,17 @@
                     <h1>Hello <span></span></h1>
                     <h1>My Name Is <span></span></h1>
                     <h1>Vincent <span></span></h1>
-                    <a href="#" type="button" class="cta">Portfolio</a>
+                    <a
+                        target="_blank"
+                        href="https://github.com/Vincent0426"
+                        type="button"
+                        class="cta"
+                        >Portfolio</a
+                    >
                 </div>
             </div>
         </section>
         <!-- End Hero Section -->
-
         <!-- About Section -->
         <section id="about">
             <div class="about container">
@@ -73,17 +87,17 @@
                 </div>
                 <div class="col-right">
                     <h1 class="section-title">About <span>me</span></h1>
-                    <h2>Front End Developer</h2>
+                    <h2>NTU Student</h2>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit.<br />Asperiores, velit alias eius non illum beatae
-                        atque repellat<br />ratione qui veritatis repudiandae
-                        adipisci maiores. At inventore<br />necessitatibus
-                        deserunt exercitationem cumque earum omnis<br />ipsum
-                        rem accusantium quis, quas quia, accusamus provident<br />suscipit
-                        magni! Expedita sint ad dolore, commodi labore nihil<br />velit
-                        earum ducimus nulla quae nostrum fugit aut, deserunt<br />reprehenderit
-                        libero enim!
+                        My name is Chia-Hsiang Hsieh. Currently studying at
+                        National Taiwan University. I like to get in touch with
+                        things related to the programming field. When I'm free,
+                        I can stay at home all day to learn what I'm interested
+                        in, using my own strength to solve encountered problems.
+                        However, becoming an engineer doesn't appeal to me.
+                        After all, everyone can write programs as long as they
+                        want , I'm more likely eager to what programs can bring
+                        to us, and how they can influence and improve our lives.
                     </p>
                     <p id="quote">
                         You have to trust that the dots will somehow connect in
@@ -93,24 +107,13 @@
             </div>
         </section>
         <!-- End About Section -->
-
-        <!-- Project Section -->
-        <section id="projects">
-            <div class="projects container">
-                <div class="projects-header">
-                    <h1 class="section-title">Recent <span>Projects</span></h1>
-                </div>
-                <div class="all-projects">
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h1>
-                                <a
-                                    href="https://github.com/Vincent0426/COVID-19-dashboard"
-                                    target="_blank"
-                                    >COVID-19-Dashboard</a
-                                >
-                            </h1>
-                            <h2>商管期末報告</h2>
+        <section id="project1">
+            <div>
+                <h1>Recent Projects</h1>
+                <div class="row justify-content-center">
+                    <div class="item">
+                        <img src="./img/covid-19.png" alt="" />
+                        <div class="info">
                             <p>
                                 當初找了很久在想有沒有辦法用純python來寫網頁，
                                 後來真的找到套件叫dash，使用python語法模仿網頁功能，透過
@@ -119,26 +122,15 @@
                                 有開發，過程不斷修改，體會到只要想得到沒有做不出來的東西。
                             </p>
                         </div>
-                        <div class="project-img">
-                            <a
-                                href="https://github.com/Vincent0426/COVID-19-dashboard"
-                                target="_blank"
-                                ><img
-                                    src="./img/covid.JPG"
-                                    alt="img"
-                                    width="100"
-                            /></a>
-                        </div>
+                        <a
+                            target="_blank"
+                            href="https://github.com/Vincent0426/COVID-19-dashboard"
+                            ><h3>COVID-19-Dashboard</h3></a
+                        >
                     </div>
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h1>
-                                <a
-                                    href="https://github.com/Vincent0426/cplusplusproj"
-                                    >Flappy Jenny</a
-                                >
-                            </h1>
-                            <h2>程設期末報告</h2>
+                    <div class="item">
+                        <img src="./img/flappy.png" alt="" />
+                        <div class="info">
                             <p>
                                 這是改編經典遊戲flappybird來的，從一開始安裝套件就找了
                                 很多方法，畢竟跟python可以直接import不一樣，也是因為這
@@ -148,29 +140,15 @@
                                 記住暫停的時間還有所剩的秒數，不然再開始時會有bug出現。
                             </p>
                         </div>
-                        <div class="project-img">
-                            <a
-                                href="https://github.com/Vincent0426/Flappy-Jenny"
-                                target="_blank"
-                            >
-                                <img
-                                    id="flappy"
-                                    src="./img/flappy.png"
-                                    alt="img"
-                                />
-                            </a>
-                        </div>
+                        <a
+                            target="_blank"
+                            href="https://github.com/Vincent0426/Flappy-Jenny"
+                            ><h3>Flappy Jenny</h3></a
+                        >
                     </div>
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h1>
-                                <a
-                                    href="https://github.com/Vincent0426/stock"
-                                    target="_blank"
-                                    >Stock</a
-                                >
-                            </h1>
-                            <h2>First Case</h2>
+                    <div class="item">
+                        <img src="./img/stock.png" alt="" />
+                        <div class="info">
                             <p>
                                 這是第一次接到case且有拿到酬勞，用python爬公司營收，
                                 因為營收半衰期很快，訊息來源不能有延遲，直接串接證交所
@@ -179,25 +157,17 @@
                                 透過docker外包exe檔案出去，讓使用者可以輸入年份、月份得到資訊。
                             </p>
                         </div>
-                        <div class="project-img">
-                            <a
-                                href="https://github.com/Vincent0426/stock"
-                                target="_blank"
-                            >
-                                <img src="./img/stock.png" alt="img" />
-                            </a>
-                        </div>
+                        <a
+                            target="_blank"
+                            href="https://github.com/Vincent0426/stock"
+                            ><h3>Crawler Stock</h3></a
+                        >
                     </div>
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h1>
-                                <a
-                                    href="https://github.com/Vincent0426/phpMysqlProject"
-                                    target="_blank"
-                                    >MySQL & PHP</a
-                                >
-                            </h1>
-                            <h2>Full Stack</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="item">
+                        <img src="./img/sqlpro.png" alt="" />
+                        <div class="info">
                             <p>
                                 第一次做出前端搭配後端的project，雖然只是小app，不過算是一大
                                 突破，了解到資料庫的概念，還有前後端怎麼搭配使用，要怎麼跟系統串
@@ -205,68 +175,48 @@
                                 越龐大，之後可以使用這些資料做更多分析或數據化。
                             </p>
                         </div>
-                        <div class="project-img">
-                            <a
-                                href="https://github.com/Vincent0426/phpMysqlProject"
-                                target="_blank"
-                            >
-                                <img src="./img/sqlpro.png" alt="img" />
-                            </a>
-                        </div>
+                        <a
+                            target="_blank"
+                            href="https://github.com/Vincent0426/phpMysqlProject"
+                            ><h3>Php&mysql</h3></a
+                        >
                     </div>
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h1>Projects 5</h1>
-                            <h2>Coding is Love</h2>
+                    <div class="item">
+                        <img src="./img/book.png" alt="" />
+                        <div class="info">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Esse, eum vero nulla quis sed
-                                temporibus sit exercitationem, ullam eius
-                                deleniti perspiciatis tempore sapiente mollitia
-                                adipisci? Ratione architecto quos tempore
-                                minima.
+                                用python寫出line機器人，可以跟人對話，之前都很好奇
+                                那些機器人是怎麼回打的，又剛好看到文章說可以用python寫，
+                                心血來潮就研究了一下，一開始串連自己line帳號真的用很久，
+                                原本想做動態查詢，但selenium跑太慢了就換了一個方式，是
+                                可以查詢矚目書和六六折的。
                             </p>
                         </div>
-                        <div class="project-img">
-                            <img src="./img/project.jpeg" alt="img" />
-                        </div>
+                        <a
+                            target="_blank"
+                            href="https://github.com/Vincent0426/phpMysqlProject"
+                            ><h3>Crawler Books</h3></a
+                        >
                     </div>
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h1>Coursera</h1>
-                            <p>
-                                Coursera讓我有機會接觸到更多新知，像是可以先看看OR的初步，
-                                大數據怎麼在商業上被使用，還有像是資訊經濟要怎麼解決，
-                                雖然裡面很多paper，但多看幾次還是可以大概看懂，藉此也能
-                                增加自己的視野，也再次讓我領悟到賈伯斯的那段話，多看多聽，
-                                總有一天會幫上忙的，現在在上google的IT課程。
-                            </p>
-                        </div>
-                        <div class="project-img">
-                            <a
-                                href="https://www.coursera.org/user/363c59d0a24664ce8cd9d9e1cc5799bf"
-                                target="_blank"
-                            >
-                                <img
-                                    id="coursera"
-                                    src="./img/coursera.png"
-                                    alt="img"
-                                />
-                            </a>
+                    <div class="item">
+                        <img src="./img/snow.jpg" alt="" />
+                        <div class="info">
+                            <p>Hello</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Project Section -->
-        <!-- Service Section -->
-        <section id="services">
-            <div class="services container">
-                <div class="service-top">
+        <!-- Project Section -->
+
+        <!-- Certificate Section -->
+        <section id="certificates">
+            <div class="certificates container">
+                <div class="certificate-top">
                     <h1 class="section-title">Certificates</h1>
                 </div>
-                <div class="service-bottom">
-                    <div class="service-item">
+                <div class="certificate-bottom">
+                    <div class="certificate-item">
                         <div class="icon">
                             <img
                                 src="https://img.icons8.com/bubbles/100/000000/services.png"
@@ -279,7 +229,7 @@
                             architecto placeat beatae tenetur officia quod
                         </p>
                     </div>
-                    <div class="service-item">
+                    <div class="certificate-item">
                         <div class="icon">
                             <img
                                 src="https://img.icons8.com/bubbles/100/000000/services.png"
@@ -292,7 +242,7 @@
                             architecto placeat beatae tenetur officia quod
                         </p>
                     </div>
-                    <div class="service-item">
+                    <div class="certificate-item">
                         <div class="icon">
                             <img
                                 src="https://img.icons8.com/bubbles/100/000000/services.png"
@@ -305,7 +255,7 @@
                             architecto placeat beatae tenetur officia quod
                         </p>
                     </div>
-                    <div class="service-item">
+                    <div class="certificate-item">
                         <div class="icon">
                             <img
                                 src="https://img.icons8.com/bubbles/100/000000/services.png"
@@ -321,53 +271,18 @@
                 </div>
             </div>
         </section>
-        <!-- End Service Section -->
+        <!-- End Certificate Section -->
 
         <!-- Contact Section -->
         <section id="contact">
             <div class="contact container">
                 <div>
-                    <h1 class="section-title">Contact <span>info</span></h1>
+                    <h1 class="section-title">Contact <span>Info</span></h1>
                 </div>
                 <div class="contact-items">
                     <div class="contact-item">
                         <div class="icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="65"
-                                height="65"
-                                viewBox="0 0 172 172"
-                                style="fill: #000000"
-                            >
-                                <g
-                                    fill="none"
-                                    fill-rule="nonzero"
-                                    stroke="none"
-                                    stroke-width="1"
-                                    stroke-linecap="butt"
-                                    stroke-linejoin="miter"
-                                    stroke-miterlimit="10"
-                                    stroke-dasharray=""
-                                    stroke-dashoffset="0"
-                                    font-family="none"
-                                    font-weight="none"
-                                    font-size="none"
-                                    text-anchor="none"
-                                    style="mix-blend-mode: normal"
-                                >
-                                    <path
-                                        d="M0,172v-172h172v172z"
-                                        fill="none"
-                                    ></path>
-                                    <g fill="#ffffff">
-                                        <path
-                                            d="M48.16,13.72641c-18.95899,0 -34.4,15.44101 -34.4,34.4v75.68c0,18.95899 15.44101,34.4 34.4,34.4h75.68c18.95899,0 34.4,-15.44101 34.4,-34.4v-75.68c0,-18.95899 -15.44101,-34.4 -34.4,-34.4zM48.16,20.60641h75.68c15.24149,0 27.52,12.27851 27.52,27.52v75.68c0,15.24149 -12.27851,27.52 -27.52,27.52h-75.68c-15.24149,0 -27.52,-12.27851 -27.52,-27.52v-75.68c0,-15.24149 12.27851,-27.52 27.52,-27.52zM62.08797,37.96094c-7.03591,-0.30403 -12.37608,2.36936 -15.73531,5.58328c-1.67961,1.60696 -2.89227,3.3264 -3.72219,4.93156c-0.82991,1.60517 -1.35719,2.92851 -1.35719,4.64937c0,-0.15329 -0.0378,0.65128 -0.06047,1.58563c-0.0227,0.93435 -0.01857,2.19385 0.06719,3.71547c0.17186,3.04323 0.68765,7.15968 2.05594,12.04c2.73658,9.76064 8.89856,22.56449 22.26594,35.93188c13.36739,13.36738 26.17049,19.52849 35.93188,22.26594c4.88069,1.36872 8.99648,1.88372 12.04,2.05594c1.52176,0.0861 2.77429,0.08975 3.70875,0.06719c0.93446,-0.0227 1.74511,-0.06047 1.59235,-0.06047c1.72086,0 3.04421,-0.52727 4.64937,-1.35719c1.60517,-0.82991 3.3246,-2.04257 4.93156,-3.72219c3.21393,-3.35923 5.8873,-8.6994 5.58328,-15.73531c-0.14426,-3.35565 -2.00734,-6.32724 -4.75688,-8.08938c-2.12482,-1.36153 -5.42341,-3.47507 -9.72875,-6.22828c-4.99521,-3.1915 -11.38432,-3.41947 -16.59531,-0.56437l0.29562,-0.14781l-4.0514,1.74016l-0.29563,0.20828c-0.98473,0.69141 -2.20435,0.8195 -3.31235,0.35609c-3.10374,-1.29793 -7.93978,-3.84807 -12.4364,-8.34469c-4.49662,-4.49662 -7.04676,-9.33267 -8.34469,-12.4364c-0.46341,-1.108 -0.33533,-2.32761 0.35609,-3.31235l0.20828,-0.29563l1.74016,-4.0514l-0.14781,0.29562c2.85439,-5.20969 2.63245,-11.59862 -0.56437,-16.59531c-2.75322,-4.30534 -4.86675,-7.60393 -6.22828,-9.72875c-1.76214,-2.74954 -4.73372,-4.6126 -8.08938,-4.75688zM61.79235,44.83422c0.96498,0.04149 1.96133,0.60604 2.59344,1.59235c1.36294,2.12702 3.47749,5.42721 6.22828,9.72875c1.82557,2.85339 1.95387,6.60343 0.3225,9.58094l-0.08063,0.14781l-1.65953,3.87672l0.34266,-0.62485c-2.03307,2.89559 -2.44167,6.65591 -1.075,9.9236c1.55039,3.70746 4.51527,9.33262 9.82953,14.64687c5.31426,5.31426 10.93941,8.27914 14.64687,9.82953c3.26768,1.36667 7.02801,0.95807 9.9236,-1.075l-0.62485,0.34266l3.87672,-1.65953l0.14781,-0.08063c2.97621,-1.63066 6.72607,-1.49479 9.58094,0.32922v-0.00672c4.30154,2.75079 7.60173,4.86534 9.72875,6.22828c0.9863,0.63211 1.55086,1.62845 1.59235,2.59344c0.22573,5.22425 -1.58874,8.49505 -3.68188,10.68281c-1.04656,1.09389 -2.18147,1.88777 -3.1175,2.37172c-0.93603,0.48395 -1.83127,0.58453 -1.49156,0.58453c-0.63093,0 -0.96323,0.04138 -1.7536,0.06047c-0.79037,0.01926 -1.84979,0.02031 -3.15781,-0.05375c-2.61603,-0.14802 -6.22691,-0.59461 -10.57531,-1.81406c-8.69681,-2.43889 -20.3551,-7.93884 -32.92188,-20.50562c-12.56678,-12.56678 -18.06759,-24.22606 -20.50562,-32.92188c-1.21902,-4.34791 -1.66634,-7.95964 -1.81406,-10.57531c-0.07386,-1.30784 -0.07291,-2.36752 -0.05375,-3.15781c0.01926,-0.79029 0.06047,-1.12215 0.06047,-1.7536c0,0.3397 0.10059,-0.55553 0.58453,-1.49156c0.48395,-0.93603 1.27783,-2.07094 2.37172,-3.1175c2.18777,-2.09314 5.45857,-3.90762 10.68281,-3.68188z"
-                                        ></path>
-                                    </g>
-                                </g>
-                            </svg>
+                            <i class="bi bi-telephone"></i>
                         </div>
                         <div class="contact-info">
                             <h1>Phone</h1>
@@ -376,42 +291,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="icon">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                width="60"
-                                height="60"
-                                viewBox="0 0 172 172"
-                                style="fill: #000000"
-                            >
-                                <g
-                                    fill="none"
-                                    fill-rule="nonzero"
-                                    stroke="none"
-                                    stroke-width="1"
-                                    stroke-linecap="butt"
-                                    stroke-linejoin="miter"
-                                    stroke-miterlimit="10"
-                                    stroke-dasharray=""
-                                    stroke-dashoffset="0"
-                                    font-family="none"
-                                    font-weight="none"
-                                    font-size="none"
-                                    text-anchor="none"
-                                    style="mix-blend-mode: normal"
-                                >
-                                    <path
-                                        d="M0,172v-172h172v172z"
-                                        fill="none"
-                                    ></path>
-                                    <g fill="#ffffff">
-                                        <path
-                                            d="M0,24.08v123.84h172v-123.84zM6.88,30.96h158.24v110.08h-158.24zM13.76,47.87781v8.11625l72.24,40.94406l72.24,-40.94406v-8.11625l-72.24,40.94406z"
-                                        ></path>
-                                    </g>
-                                </g>
-                            </svg>
+                            <i class="bi bi-envelope"></i>
                         </div>
                         <div class="contact-info">
                             <h1>Email</h1>
@@ -450,7 +330,7 @@
                                         d="M0,172v-172h172v172z"
                                         fill="none"
                                     ></path>
-                                    <g fill="#ffffff">
+                                    <g fill="#b8a07e">
                                         <path
                                             d="M30.96,13.76c-9.45834,0 -17.2,7.74166 -17.2,17.2v110.08c0,9.45834 7.74166,17.2 17.2,17.2h110.08c9.45834,0 17.2,-7.74166 17.2,-17.2v-110.08c0,-9.45834 -7.74166,-17.2 -17.2,-17.2zM30.96,20.64h110.08c5.73958,0 10.32,4.58042 10.32,10.32v110.08c0,5.73958 -4.58042,10.32 -10.32,10.32h-110.08c-5.73958,0 -10.32,-4.58042 -10.32,-10.32v-110.08c0,-5.73958 4.58042,-10.32 10.32,-10.32zM86,34.4c-29.93815,0 -55.04,19.53346 -55.04,44.5386c0,22.30907 19.89718,40.42954 45.87563,43.91375h0.00672c0.68383,0.14614 1.47082,0.37918 1.935,0.59797c0.09486,0.04471 0.08462,0.04864 0.13437,0.08062c-0.0091,0.28259 0.07887,1.58287 -0.05375,2.58c-0.03268,0.19302 -0.59599,3.52734 -0.71219,4.18578v0.00672c-0.16044,0.91827 -0.76661,2.7675 0.79953,5.12641c0.78307,1.17945 2.40495,2.13376 3.92375,2.26422c1.5188,0.13044 2.91254,-0.24489 4.46797,-0.90031c3.56065,-1.47508 10.67035,-5.6768 18.87969,-11.29422c8.20214,-5.61249 17.05967,-12.42198 22.85719,-18.96031c7.88456,-8.48558 11.9661,-17.63756 11.9661,-27.60062c0,-25.00205 -25.10157,-44.5386 -55.04,-44.5386zM86,41.28c26.96605,0 48.16,17.34209 48.16,37.6586c0,8.16216 -3.0754,15.34529 -10.1386,22.93781l-0.03359,0.0336l-0.02688,0.0336c-5.02886,5.68244 -13.66082,12.42039 -21.62765,17.87187c-7.76055,5.31032 -15.00523,9.38968 -17.19328,10.3536c0.2246,-1.32076 0.51735,-3.03688 0.51735,-3.03688l0.01344,-0.06047l0.00672,-0.06047c0.19137,-1.43915 0.70635,-3.62218 -0.38969,-6.32235v-0.00672v-0.00672c-0.81668,-1.98797 -2.33706,-2.86037 -3.5811,-3.44672c-1.24403,-0.58635 -2.4399,-0.89017 -3.43328,-1.10188l-0.13437,-0.03359l-0.1411,-0.01344c-23.47589,-3.04838 -40.15797,-18.897 -40.15797,-37.14125c0,-20.3203 21.19367,-37.6586 48.16,-37.6586zM82.53313,65.35328c-1.7331,0.03215 -3.41313,1.35477 -3.41313,3.44672v20.64c0,1.89888 1.54112,3.44 3.44,3.44c1.89888,0 3.44,-1.54112 3.44,-3.44v-9.90344l7.51828,11.8989c1.94704,2.72448 6.24172,1.35165 6.24172,-1.99547v-20.64c0,-1.89888 -1.54112,-3.44 -3.44,-3.44c-1.89888,0 -3.44,1.54112 -3.44,3.44v10.32l-7.51828,-12.31547c-0.73014,-1.02168 -1.78873,-1.47054 -2.82859,-1.45125zM51.6,65.36c-1.89888,0 -3.44,1.54112 -3.44,3.44v20.64c0,1.89888 1.54112,3.44 3.44,3.44h10.32c1.89888,0 3.44,-1.54112 3.44,-3.44c0,-1.89888 -1.54112,-3.44 -3.44,-3.44h-6.88v-17.2c0,-1.89888 -1.54112,-3.44 -3.44,-3.44zM72.24,65.36c-1.89888,0 -3.44,1.54112 -3.44,3.44v20.64c0,1.89888 1.54112,3.44 3.44,3.44c1.89888,0 3.44,-1.54112 3.44,-3.44v-20.64c0,-1.89888 -1.54112,-3.44 -3.44,-3.44zM106.64,65.36c-1.89888,0 -3.44,1.54112 -3.44,3.44v20.64c0,1.89888 1.54112,3.44 3.44,3.44h10.32c1.89888,0 3.44,-1.54112 3.44,-3.44c0,-1.89888 -1.54112,-3.44 -3.44,-3.44h-6.88v-3.44h6.88c1.90232,0 3.44,-1.54112 3.44,-3.44c0,-1.89888 -1.53768,-3.44 -3.44,-3.44h-6.88v-3.44h6.88c1.89888,0 3.44,-1.54112 3.44,-3.44c0,-1.89888 -1.54112,-3.44 -3.44,-3.44z"
                                         ></path>
@@ -464,6 +344,25 @@
                         </div>
                     </div>
                 </div>
+                <div id="footer">
+                    <div class="socials-media">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Footer -->
             </div>
         </section>
         <!-- End Contact Section -->
@@ -482,5 +381,11 @@
             integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
             crossorigin="anonymous"
         ></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script type="text/javascript">
+            $(document).on("click", "ul li", function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        </script>
     </body>
 </html>
