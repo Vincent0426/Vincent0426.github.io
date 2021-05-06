@@ -276,7 +276,7 @@ ul li.active a {
     text-transform: uppercase;
     color: #b8a07e;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 #project1 .item {
     /* 設定父親定位點 */
@@ -311,7 +311,7 @@ ul li.active a {
     color: #b8a07e;
     text-decoration: underline;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
     text-transform: uppercase;
 }
 /* End Projects section */
