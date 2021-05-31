@@ -383,6 +383,10 @@ ul li.active a {
     color: white;
     text-align: center;
 }
+#certificates .row {
+    justify-content: center;
+    margin-top: 20px;
+}
 /* End Certificates Section */
 
 /* contact Section */
