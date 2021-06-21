@@ -25,3 +25,8 @@ https://stackoverflow.com/questions/16903605/hide-button-after-click-with-existi
 
 用svg來畫座標，這邊是畫好一組後，用旋轉的方式呈現<br/>
 https://www.oxxostudio.tw/articles/201406/svg-04-path-1.html
+
+使用fontawesome來更改字型
+https://fontawesome.com/
+
+有設定start的動畫是透過不同顏色達到閃爍效果
