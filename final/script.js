@@ -109,7 +109,9 @@ backLight.castShadow = true;
 scene.add(backLight);
 
 const laneTypes = ["car", "truck", "forest"];
-const laneSpeeds = [2, 2.5, 3];
+const lowSpeeds = [2, 2.5, 3];
+const mediumSpeeds = [100];
+
 const vechicleColors = [
     0x4b0082, 0x800080, 0x9932cc, 0x9370db, 0xdda0dd, 0xd8bfd8, 0xe6e6fa,
 ];
@@ -451,7 +453,7 @@ function Lane(index) {
                 return vechicle;
             });
 
-            this.speed = laneSpeeds[Math.floor(Math.random() * laneSpeeds.length)];
+            this.speed = lowSpeeds[Math.floor(Math.random() * lowSpeeds.length)];
             break;
         }
         case "truck": {
@@ -474,13 +476,13 @@ function Lane(index) {
                 return vechicle;
             });
 
-            this.speed = laneSpeeds[Math.floor(Math.random() * laneSpeeds.length)];
+            this.speed = lowSpeeds[Math.floor(Math.random() * lowSpeeds.length)];
             break;
         }
     }
 }
 
-document.querySelector("#retry").addEventListener("click", () => {
+document.querySelector("#start").addEventListener("click", () => {
     lanes.forEach((lane) => scene.remove(lane.mesh));
     initaliseValues();
     endDOM.style.visibility = "hidden";
@@ -495,18 +497,21 @@ document.getElementById("left").addEventListener("click", () => move("left"));
 document.getElementById("right").addEventListener("click", () => move("right"));
 
 window.addEventListener("keydown", (event) => {
-    if (event.keyCode == "38" && !gameOver) {
-        // up arrow
-        move("forward");
-    } else if (event.keyCode == "40" && !gameOver) {
-        // down arrow
-        move("backward");
-    } else if (event.keyCode == "37" && !gameOver) {
-        // left arrow
-        move("left");
-    } else if (event.keyCode == "39" && !gameOver) {
-        // right arrow
-        move("right");
+    if (!gameOver) {
+        switch (event.code) {
+            case "ArrowUp":
+                move("forward");
+                break;
+            case "ArrowRight":
+                move("right");
+                break;
+            case "ArrowDown":
+                move("backward");
+                break;
+            case "ArrowLeft":
+                move("left");
+                break;
+        }
     }
 });
 
