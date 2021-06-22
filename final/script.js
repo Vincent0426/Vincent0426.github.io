@@ -109,13 +109,12 @@ backLight.castShadow = true;
 scene.add(backLight);
 
 const laneTypes = ["car", "truck", "forest"];
-const lowSpeeds = [2, 2.5, 3];
-const mediumSpeeds = [100];
+const lowSpeeds = [2, 3, 4, 5, 6];
 
 const vechicleColors = [
     0x4b0082, 0x800080, 0x9932cc, 0x9370db, 0xdda0dd, 0xd8bfd8, 0xe6e6fa,
 ];
-const threeHeights = [20, 45, 60];
+const treeHeights = [20, 45, 60];
 
 const initaliseValues = () => {
     lanes = generateLanes();
@@ -300,8 +299,8 @@ function Truck() {
     return truck;
 }
 
-function Three() {
-    const three = new THREE.Group();
+function Tree() {
+    const tree = new THREE.Group();
 
     const trunk = new THREE.Mesh(
         new THREE.BoxBufferGeometry(15 * zoom, 15 * zoom, 20 * zoom),
@@ -310,9 +309,9 @@ function Three() {
     trunk.position.z = 10 * zoom;
     trunk.castShadow = true;
     trunk.receiveShadow = true;
-    three.add(trunk);
+    tree.add(trunk);
 
-    height = threeHeights[Math.floor(Math.random() * threeHeights.length)];
+    height = treeHeights[Math.floor(Math.random() * treeHeights.length)];
 
     const crown = new THREE.Mesh(
         new THREE.BoxBufferGeometry(30 * zoom, 30 * zoom, height * zoom),
@@ -321,9 +320,9 @@ function Three() {
     crown.position.z = (height / 2 + 20) * zoom;
     crown.castShadow = true;
     crown.receiveShadow = false;
-    three.add(crown);
+    tree.add(crown);
 
-    return three;
+    return tree;
 }
 
 function Chicken() {
@@ -331,22 +330,63 @@ function Chicken() {
 
     const body = new THREE.Mesh(
         new THREE.BoxBufferGeometry(chickenSize * zoom, chickenSize * zoom, 20 * zoom),
-        new THREE.MeshPhongMaterial({ color: 0x8b0000, flatShading: true })
+        new THREE.MeshPhongMaterial({ color: 0x4682b4, flatShading: true })
     );
-    body.position.z = 10 * zoom;
+    body.position.z = 30 * zoom;
     body.castShadow = true;
     body.receiveShadow = true;
     chicken.add(body);
 
-    const rowel = new THREE.Mesh(
-        new THREE.BoxBufferGeometry(2 * zoom, 4 * zoom, 2 * zoom),
-        new THREE.MeshLambertMaterial({ color: "white", flatShading: true })
+    const head = new THREE.Mesh(
+        new THREE.SphereGeometry(
+            (chickenSize / 2) * zoom,
+            (chickenSize / 2) * zoom,
+            10 * zoom
+        ),
+        new THREE.MeshLambertMaterial({ color: 0xb0e0e6, flatShading: true })
     );
-    rowel.position.z = 21 * zoom;
-    rowel.castShadow = true;
-    rowel.receiveShadow = false;
-    chicken.add(rowel);
-
+    head.position.z = 45 * zoom;
+    head.castShadow = true;
+    head.receiveShadow = false;
+    chicken.add(head);
+    const rightHand = new THREE.Mesh(
+        new THREE.BoxBufferGeometry(15 * zoom, 4 * zoom, 4 * zoom),
+        new THREE.MeshLambertMaterial({ color: 0xb0e0e6, flatShading: true })
+    );
+    rightHand.position.x = 10 * zoom;
+    rightHand.position.z = 30 * zoom;
+    rightHand.castShadow = true;
+    rightHand.receiveShadow = false;
+    chicken.add(rightHand);
+    const leftHand = new THREE.Mesh(
+        new THREE.BoxBufferGeometry(15 * zoom, 4 * zoom, 4 * zoom),
+        new THREE.MeshLambertMaterial({ color: 0xb0e0e6, flatShading: true })
+    );
+    leftHand.position.x = -10 * zoom;
+    leftHand.position.z = 30 * zoom;
+    leftHand.castShadow = true;
+    leftHand.receiveShadow = false;
+    chicken.add(leftHand);
+    const rightLeg = new THREE.Mesh(
+        new THREE.BoxBufferGeometry(4 * zoom, 4 * zoom, 15 * zoom),
+        new THREE.MeshLambertMaterial({ color: 0xb0e0e6, flatShading: true })
+    );
+    rightLeg.position.x = -1 * zoom;
+    rightLeg.position.y = 5 * zoom;
+    rightLeg.position.z = 10 * zoom;
+    rightLeg.castShadow = true;
+    rightLeg.receiveShadow = false;
+    chicken.add(rightLeg);
+    const leftLeg = new THREE.Mesh(
+        new THREE.BoxBufferGeometry(4 * zoom, 4 * zoom, 15 * zoom),
+        new THREE.MeshLambertMaterial({ color: 0xb0e0e6, flatShading: true })
+    );
+    leftLeg.position.x = -7 * zoom;
+    leftLeg.position.y = 5 * zoom;
+    leftLeg.position.z = 10 * zoom;
+    leftLeg.castShadow = true;
+    leftLeg.receiveShadow = false;
+    chicken.add(leftLeg);
     return chicken;
 }
 
@@ -418,18 +458,18 @@ function Lane(index) {
             this.mesh = new Grass();
 
             this.occupiedPositions = new Set();
-            this.threes = [1, 2, 3, 4].map(() => {
-                const three = new Three();
+            this.trees = [1, 2, 3, 4].map(() => {
+                const tree = new Tree();
                 let position;
                 do {
                     position = Math.floor(Math.random() * columns);
                 } while (this.occupiedPositions.has(position));
                 this.occupiedPositions.add(position);
-                three.position.x =
+                tree.position.x =
                     (position * positionWidth + positionWidth / 2) * zoom -
                     (boardWidth * zoom) / 2;
-                this.mesh.add(three);
-                return three;
+                this.mesh.add(tree);
+                return tree;
             });
             break;
         }
